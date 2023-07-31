@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Krona One');
+@import url('https://fonts.googleapis.com/css?family=Lilita One');
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root{
+	--maincolor: #ffff;
+}
+/* --------------HEADER------------------------------------------------------------------------------------------ */
+.nav_ul_li_a{
+	color: #212121;
+	text-decoration: none;
+	padding: 2px;
+}
+.nav_ul_li_a:hover{
+	color: #ffff;
+	opacity: 0.8;
+}
+.nav_ul li:hover{
+	background: #698960;
+	color: #43228b;
+	border-radius: 6px;
+}
+.nav_ul button:hover{
+	background: #fff;
+	color: #43228b;
+	border-radius: 6px;
+}
+.logo img{
+    position: absolute;
+    width: 300px;
+    height: 180px;
+	border-radius: 0;
+    padding-top: -50px;
+
+}
+.logo_nav:hover{
+	color: #ffff;
+}
+nav{
+    position: absolute;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+	height: 9vh;
+	width: 100vw;
+    padding-top: 80px;
+}
+.nav_ul{
+	list-style: none;
+	display: flex;
+}
+.nav_ul li{
+	letter-spacing: 3px;
+	margin-left: 32px;
+	padding: 6px;
+}
+/*Criar as barras do menu para telefone*/
+.nav_menu_bars div{
+	width: 32px;
+	height: 2px;
+	background: #32610D;
+	margin: 8px;
+	transition: 0.3s;
+}
+/*Para ocultar as barras do menu de telefone na 
+página do site para computadores*/
+.nav_menu_bars{
+	display: none;
+	cursor: pointer;
+}
+
+#botao_idioma{
+	background: var(--maincolor);
+	border: none;
+	background: none;
+}
+#botao_idioma:hover{
+	background: var(--maincolor);
+	border: none;
+	background: #fff;
+}
+/* ------------------MAIN-------------------------------------------------------------------------------------------- */
+body{
+	font-family: 'Poppins', sans-serif;
+	background: #EEEEEE;
+	overflow-x: hidden;
+
+}
+
+.countdown{
+	display: flex;
+	padding: 0 35%;
+	margin: auto;
+}
+.countdown div{
+	flex-basis: 100px;
+	align-content: center;
+}
+.countdown div p{
+	font-size: 60px;
+	margin-bottom: -14px;
+}
+
+.sec_desc{
+	height: 61vh;
+    align-items: center;
+	display: flex;
+	width: 90vw;
+	margin-left: 5.5vw;
+}
+
+.desc{
+    font-family: 'Krona One';
+	flex-basis: 99%;
+	padding: 200px 0px 0 0px;
+	width: 100%;
+}
+.saudacao{
+	letter-spacing: 1.5px;
+	font-size: 2em;
+    align-items: center;
+    text-align: center;
+	line-height: 1.5;
+}
+h1{
+	font-size: 3em;
+    text-align: center;
+	letter-spacing: 2.5px;
+	margin: 24px 0;
+}
+h1 span{
+    font-family: 'Lilita One';
+    text-align: center;
+    font-size: 2.5em;
+	color: #32610D;
+}
+.low_desc{
+	letter-spacing: 1px;
+	color: #555551;
+	font-size: 1.2rem;
+	min-width: 250px;
+	line-height: 1.5;
+}
+.low_desc span{
+	color: var(--maincolor);
+	font-size: 1.2rem;
+	font-weight: 550;
+}
+/*---------------ABOUT MANGÁ------------------------------------------------------------------------------------------------.*/
+.about{
+	display: flex;
+	flex-direction: column;
+	margin: 30px 0px;
+}
+.title_about{
+    background-color: #698960;
+    text-align: center;
+    align-items: center;
+    font-family: 'Lilita One';
+	color: #212121;
+	margin: 50px 10px;
+	padding-top: 12px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 2.2rem;
+}
+.informations{
+	color: #000000;
+	padding: 30px 10vw;
+	border-radius: 20px;
+	font-size: 1.1rem;
+	letter-spacing: 1px;
+	width: 95vw;
+	text-align: justify;
+	align-self: center;
+}
+/*--------------SKILLS-----------------------------------------------------------------------------------------------------------------*/
+.characters{
+	display: flex;
+	flex-direction: column;
+	margin: 30px 0px;
+}
+.characters span{
+	font-family: 'Lilita One';
+    text-align: center;
+    font-size: 2.5em;
+	color: #32610D;
+}
+.characters img{
+	display: flex;
+	margin: right;
+	width: 30vw;
+	height: 40vh;
+}
+.informations1{
+	margin-left: 32%;
+	margin-top: 30%;
+	position: absolute;
+	display: block;
+}
+.informations2{
+	margin-left: 32%;
+	margin-top: 65%;
+	position: absolute;
+	display: block;
+}
+.informations3{
+	margin-left: 32%;
+	margin-top: 95%;
+	position: absolute;
+	display: block;
+}
+.informations4{
+	margin-left: 32%;
+	margin-top: 125%;
+	position: absolute;
+	display: block;
+}
+.informations5{
+
+	display: none;
+}
+.informations6{
+
+	display: none;
+}
+.informations7{
+	display: none;
+}
+.informations8{
+
+	display: none;
+}
+
+.title_characters{
+	background-color: #698960;
+	text-align: center;
+	align-items: center;
+	font-family: 'Lilita One';
+	color: #212121;
+	margin: 50px 10px;
+	padding-top: 12px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 2.2rem;
+}
+
+/*-------------CONTACT------------------------------------------------------------------------------------------------------*/
+.contact{
+	display: flex;
+	flex-direction: column;
+	margin: 30px 0px;
+}
+.title_contact{
+	background-color: #698960;
+	text-align: center;
+	align-items: center;
+	font-family: 'Lilita One';
+	color: #212121;
+	margin: 50px 10px;
+	padding-top: 12px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 2.2rem;
+}
+.contato{
+	display: flex;
+	flex-direction: column;
+	background: #aebeaa;
+	border-radius: 20px;
+	margin: 50px 35px;
+	width: 75vw;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+}
+.contact-details-email{
+	margin: 30px;
+	margin-top: 30px;
+	transition-duration: 0.7s;
+	border-radius: 10px;
+	border: 0.5px solid #698960;
+}
+.contact-details-email img{
+	width: 50px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+}
+.contact-details-email a{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px;
+	font-size: 18px;
+}
+.contact-details-email p{
+	display: block;
+	text-align: center;
+	padding-bottom: 10px;
+	color: #555;
+	font-size: 15px;
+}
+.contact-details-email:hover{
+	box-shadow: 0 2px 15px 0 #698960;
+}
+.title_contact_form{
+	color: #000000;
+	margin: 20px 20px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 2rem;
+	align-self: flex-start;
+}
+.form_contact{
+	padding: 20px;
+	margin: 10px;
+	height: 60vh;
+}
+.name{
+	height: 8vh;
+	width: 32.4vw;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	margin-right: 0.4vw;
+	padding: 7px;
+	border-color: #698960;
+	border-style: solid;
+}
+.email{
+	display: inline;
+	height: 8vh;
+	width: 36.5vw;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	padding: 7px;
+	border-color: #698960;
+	border-style: solid;
+}
+.subject{
+	height: 8vh;
+	width: 70vw;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	padding: 7px;
+	border-color: #698960;
+	border-style: solid;
+}
+.form_contact textarea{
+	resize: none;
+	height: 25vh;
+	width: 70vw;
+	margin: 10px 0;
+	border-radius: 15px;
+	padding: 10px;
+	border-color: #698960;
+}
+.submit{
+	background: #698960;
+	margin-top: 15px;
+	font-size: 18px;
+	padding: 10px 10px;
+	border-radius: 15px;
+	border: 1px solid #698960;
+	color: #ffff;
+	position: relative;
+	left: 45%;
+}
+
+/* ------------------FOOTER------------------------------------------------------------------------------------------------------------------ */
+footer{
+	margin-top: 15px;
+	width: 100vw;
+	height: 8vh;
+	bottom: 0;
+	display: inline-block;
+	background-color: #698960;
+}
+.copyright{
+	text-align: center;
+	padding: 2vh 0;
+	font-weight: bold;
+	color: #eee;
+	font-size: 1rem;
+}
+
+/* --------------------RESPONSIVIDADE------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 300px) and (max-width:  750px){
+	body{
+		overflow-x: hidden;
+	}
+	.wrapper .carousel {
+		grid-auto-columns: 100%;
+	  }
+	.nav_ul{
+		flex-direction: column;
+		position: absolute;
+		top: 9vh;
+		right: 0;
+		width: 36vw;
+		height: 91vh;
+		background: #43228b;
+		align-items: center;
+		justify-content: space-around;
+		transform: translateX(110%);
+		opacity: 0.9;
+		transition: transform 0.3s ease-in;
+		display: none;
+	}
+	.nav_ul li{
+		margin-left: 0;
+		opacity: 1;
+	}
+	.nav_menu_bars{
+		display: block;
+	}
+
+	.nav_ul_active{
+		transform: translateX(0);
+		display: flex;
+	}
+
+	.nav_menu_bars_active .line1{
+		transform: rotate(-45deg) translate(-8px, 8px);
+	}
+	.nav_menu_bars_active .line2{
+		opacity: 0;
+	}
+	.nav_menu_bars_active .line3{
+		transform: rotate(45deg) translate(-5px, -7px);
+	}
+
+	@keyframes navLinksEntrance{
+		0% {
+			opacity: 0;
+			transform: translateX(50px);
+		}100%{
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+	.sec_desc{
+		display: block;
+		margin-bottom: 250px;
+	}
+	.desc{
+		text-align: center;
+	}
+	.socialmedia{
+		display: inline-flex;
+		flex-direction: column;
+	}
+	.countdown{
+		display: flex;
+		padding: 0 15%;
+	}
+	.countdown div{
+		flex-basis: 100px;
+		align-content: center;
+	}
+	.countdown div p{
+		font-size: 60px;
+		margin-bottom: -14px;
+	}
+	.characters{
+		display: flex;
+		flex-direction: column;
+		margin: 30px 0px;
+	}
+	.characters span{
+		font-family: 'Lilita One';
+		text-align: center;
+		font-size: 2.5em;
+		color: #32610D;
+	}
+	.characters img{
+		margin: auto;
+		width: 80vw;
+		height: 40vh;
+	}
+	.informations1{
+		display: none;
+	}
+	.informations2{
+		display: none;
+	}
+	.informations3{
+		display: none;
+	}
+	.informations4{
+		display: none;
+	}
+	.informations5{
+		display: flex;
+		text-align: center;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.informations6{
+		display: flex;
+		text-align: center;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.informations7{
+		display: flex;
+		text-align: center;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.informations8{
+		display: flex;
+		text-align: center;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	#ga9{
+		text-align: center;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	
+	.main_photo img{
+		width: 250px;
+		height: 250px;
+	}
+	.social li a:hover{
+		box-shadow: 0 2px 15px 0 #632ED6;
+	}
+	.social li a i{
+		color: var(--maincolor);
+	}
+	.title_about{
+		margin-top: 10vh;
+		margin-bottom: 40px;
+	}
+	.trabahlos{
+		grid-template-columns: repeat(2, 35vw);
+		grid-template-rows: repeat(3, 27vw);
+	}
+	.items_works{
+		width: 25vw;
+		height: 17vw;
+	}
+	.works_item h3{
+		text-align: center;
+		font-size: 2.5vw;
+	}
+	.name{
+		width: 32vw;
+	}
+}

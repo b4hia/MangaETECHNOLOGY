@@ -181,6 +181,7 @@ h1 span{
 }
 .slide-items img {
 	max-width: 100%;
+	height: auto;
 	display: block;
   }
   

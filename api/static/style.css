@@ -179,8 +179,84 @@ h1 span{
 	text-align: justify;
 	align-self: center;
 }
-/*--------------SKILLS-----------------------------------------------------------------------------------------------------------------*/
-.characters{
+.slide-items img {
+	max-width: 100%;
+	display: block;
+  }
+  
+  .slide {
+	max-width: 380px;
+	margin: 20px auto;
+	display: grid;
+	box-shadow: 0 4px 20px 2px rgba(0, 0, 0, 0.4);
+  }
+  
+  .slide-items {
+	position: relative;
+	grid-area: 1/1;
+	border-radius: 5px;
+	overflow: hidden;
+  }
+  
+  .slide-nav {
+	grid-area: 1/1;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto 1fr;
+  }
+  
+  .slide-nav button {
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	opacity: 0;
+  }
+  
+  .slide-items > * {
+	position: absolute;
+	top: 0px;
+	opacity: 0;
+	pointer-events: none;
+  }
+  
+  .slide-items > .active {
+	position: relative;
+	opacity: 1;
+	pointer-events: initial;
+  }
+  
+  .slide-thumb {
+	display: flex;
+	grid-column: 1 / 3;
+  }
+  
+  .slide-thumb > span {
+	flex: 1;
+	display: block;
+	height: 3px;
+	background: rgba(0, 0, 0, 0.4);
+	margin: 5px;
+	border-radius: 3px;
+	overflow: hidden;
+  }
+  
+  .slide-thumb > span.active::after {
+	content: '';
+	display: block;
+	height: inherit;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 3px;
+	transform: translateX(-100%);
+	animation: thumb 5s forwards linear;
+  }
+
+  @keyframes thumb {
+	to {
+	  transform: initial;
+	}
+  }
+/*--------------PERSONAGENS-----------------------------------------------------------------------------------------------------------------*/
+/* .characters{
 	display: flex;
 	flex-direction: column;
 	margin: 30px 0px;
@@ -248,7 +324,7 @@ h1 span{
 	font-weight: 500;
 	letter-spacing: 2px;
 	font-size: 2.2rem;
-}
+} */
 
 /*-------------CONTACT------------------------------------------------------------------------------------------------------*/
 .contact{
@@ -395,9 +471,10 @@ footer{
 	body{
 		overflow-x: hidden;
 	}
-	.wrapper .carousel {
-		grid-auto-columns: 100%;
-	  }
+	.logo_nav_nav_ul_li_a{
+		max-width: 30%;
+		left: 0%;
+	}
 	.nav_ul{
 		flex-direction: column;
 		position: absolute;
@@ -405,7 +482,8 @@ footer{
 		right: 0;
 		width: 36vw;
 		height: 91vh;
-		background: #43228b;
+		background: #698960;
+		text-align: center;
 		align-items: center;
 		justify-content: space-around;
 		transform: translateX(110%);
@@ -418,6 +496,7 @@ footer{
 		opacity: 1;
 	}
 	.nav_menu_bars{
+		right: 10%;
 		display: block;
 	}
 
@@ -521,6 +600,7 @@ footer{
 		margin-right: 5%;
 	}
 	#ga9{
+		align-items: center;
 		text-align: center;
 		margin-left: 5%;
 		margin-right: 5%;

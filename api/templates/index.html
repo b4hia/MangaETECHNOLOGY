@@ -22,13 +22,12 @@
 			</div>
 			<ul class="nav_ul">
 				<li><a class="nav_ul_li_a" id="ga0" href="#about">Conheça o Mangá</a></li>
-				<li><a class="nav_ul_li_a" id="ga1" href="#characters">Personagens</a></li>
 				<li><a class="nav_ul_li_a" id="ga2" href="#contact">Contato</a></li>
 				<li><a class="nav_ul_li_a" id="ga3" href="home">Change Language</a></li>
 			</ul>
 		</nav>
         <div class="logo">
-            <a href="https://instagram.com/etechnology_8276" target="_blank" ><img class="logo_nav nav_ul_li_a" id="logo" src="../static/img/imagem_2023-07-20_224528275-removebg-preview 1.svg" alt="ETECHNOLOGY"></a>
+            <a href="https://instagram.com/etechnology_8276" target="_blank" ><img class="logo_nav_nav_ul_li_a" id="logo" src="../static/img/imagem_2023-07-20_224528275-removebg-preview 1.svg" alt="ETECHNOLOGY"></a>
         </div>
 	</header>
 <!------------------------------------------------------- MAIN ---------------------------------------------------------------->
@@ -72,10 +71,10 @@
 		</section>
 <!------------------------------------------------------ PERSONAGENS -------------------------------------------------------------->
 		<section>
-			<div class="characters">
-				<h2 class="title_characters" id="characters">PERSONAGENS</h2>
-				<h5 id="ga9" class="text-secondary fw-normal py-2 fst-italic">Conheça um pouco sobre as Personagens.</h5>
-				<span>NOME</span>
+			<!-- <div class="characters">
+				<h2 class="title_characters" id="characters">CONFIRA ALGUMAS DAS ARTES DO MANGÁ</h2> -->
+				<h5 id="ga9" class="text-secondary fw-normal py-2 fst-italic">Algumas Artes do Mangá.</h5>
+				<!-- <span>NOME</span>
 				<img src="../static/img/modelo foto.png" alt="">
 				<p class="informations1">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ad maiores rerum illum, voluptatibus possimus iste! Vero cupiditate mollitia commodi ullam ea similique fugit, laboriosam eius qui excepturi nam earum.	
@@ -107,7 +106,26 @@
 				<p class="informations8">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ad maiores rerum illum, voluptatibus possimus iste! Vero cupiditate mollitia commodi ullam ea similique fugit, laboriosam eius qui excepturi nam earum.	
 				</p>
-			</div>
+			</div> -->
+			<div data-slide="slide" class="slide">
+    			<div class="slide-items">
+      				<img src="../static/img/AirBrush_20230731114832.jpg" alt="Img 1">
+      				<img src="../static/img/AirBrush_20230731114850.jpg" alt="Img 2">
+      				<img src="../static/img/Screenshot_20230720-172804~2.png" alt="Img 3">
+      				<img src="../static/img/Screenshot_20230720-173021~2.png" alt="Img 4">
+					<img src="../static/img/Screenshot_20230720-173117~2.png" alt="Img 5">
+					<img src="../static/img/Screenshot_20230720-173136~2.png" alt="Img 6">
+					<img src="../static/img/Screenshot_20230720-173144~2.png" alt="Img 7">
+					<img src="../static/img/Screenshot_20230720-173151~2.png" alt="Img 8">
+					<img src="../static/img/Screenshot_20230720-174032~2.png" alt="Img 9">
+					<img src="../static/img/Screenshot_20230720-174353.png" alt="Img 10">
+    			</div>
+    		<div class="slide-nav">
+      			<div class="slide-thumb"></div>
+      				<button class="slide-prev">Anterior</button>
+      				<button class="slide-next">Próximo</button>
+				</div>
+  			</div>
 		</section>
 <!---------------------------------------------------- CONTACT --------------------------------------------------------------->
 		<section class="contact">
@@ -130,6 +148,92 @@
 			<p class="copyright">© 2023 - Thaís Melo de Camargo and ETECHNOLOGY </p>
 	</footer>
 	<script>
+		const navBar = document.querySelector(".nav_menu_bars");
+		const navUl = document.querySelector(".nav_ul");
+		const navLinks = document.querySelectorAll(".nav_ul li");
+		function add_removeClass(){
+    		navBar.classList.toggle("nav_menu_bars_active");
+    		navUl.classList.toggle("nav_ul_active");
+		}
+		navBar.addEventListener("click", ()=>{
+    		add_removeClass();
+		});
+		navLinks.forEach((e)=>{
+    		e.addEventListener("click", ()=>{
+        		add_removeClass()
+    		});
+		});
+		function widthSize (){
+    		let ancho = window.innerWidth;
+    		if(ancho > 750){
+        		console.log("hi")
+        		navBar.classList.remove("nav_menu_bars_active");
+        		navUl.classList.remove("nav_ul_active");
+    		};
+    		console.log(ancho);
+		};
+		window.addEventListener("resize", widthSize);
+		class SlideStories {
+  			constructor(id) {
+    		this.slide = document.querySelector(`[data-slide="${id}"]`);
+    		this.active = 0;
+    		this.init();
+  			}
+
+  			activeSlide(index) {
+    			this.active = index;
+    			this.items.forEach((item) => item.classList.remove('active'));
+    			this.items[index].classList.add('active');
+    			this.thumbItems.forEach((item) => item.classList.remove('active'));
+    			this.thumbItems[index].classList.add('active');
+    			this.autoSlide();
+  			}
+
+  			prev() {
+    			if (this.active > 0) {
+      				this.activeSlide(this.active - 1);
+    			} else {
+      				this.activeSlide(this.items.length - 1);
+    			}
+ 		 	}
+
+  			next() {
+    			if (this.active < this.items.length - 1) {
+      				this.activeSlide(this.active + 1);
+    			} else {
+      				this.activeSlide(0);
+    			}
+ 		 	}
+
+  			addNavigation() {
+    			const nextBtn = this.slide.querySelector('.slide-next');
+    			const prevBtn = this.slide.querySelector('.slide-prev');
+    			nextBtn.addEventListener('click', this.next);
+    			prevBtn.addEventListener('click', this.prev);
+  			}
+
+  			addThumbItems() {
+    			this.items.forEach(() => (this.thumb.innerHTML += `<span></span>`));
+    			this.thumbItems = Array.from(this.thumb.children);
+  			}
+
+  			autoSlide() {
+    			clearTimeout(this.timeout);
+    			this.timeout = setTimeout(this.next, 5000);
+  			}
+
+  			init() {
+    			this.next = this.next.bind(this);
+    			this.prev = this.prev.bind(this);
+    			this.items = this.slide.querySelectorAll('.slide-items > *');
+    			this.thumb = this.slide.querySelector('.slide-thumb');
+    			this.addThumbItems();
+    			this.activeSlide(0);
+    			this.addNavigation();
+  			}
+		}
+		new SlideStories('slide');
+
 		var countDowndate = new Date("Oct 16, 2023 00:00:00").getTime();
 		var x = setInterval(function(){
 			var agora = new Date().getTime();

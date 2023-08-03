@@ -1,2 +1,3 @@
 # MangaETECHNOLOGY
-anoucement of mangá web site
+web advertisement for a manga
+

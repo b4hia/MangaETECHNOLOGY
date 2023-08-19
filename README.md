@@ -1,6 +1,7 @@
-# MangaETECHNOLOGY
-web advertisement for a manga
-
+# Mangá ETECHNOLOGY🐱‍🐉
+Web Advertisement for a manga
+This Landing Page is a comission for [Thaís Melo](instagram.com/thaismwlo) 
+#### 👉[click here to access site](https://mangaetechnology.vercel.app/)
 ## Requisitos
 
 Para que a execução do sistema e seu uso sejam efetivados, listamos um passo a passo para guiar o usuário:
@@ -18,12 +19,12 @@ Com o Git e Python devidamente instalados em sua máquina, siga os próximos pas
 1. Clone o repositório através de um terminal, utilize o comando:
 
 ```
-git clone https://github.com/GRUPOAPIDSM2023/API.git
+git clone https://github.com/b4hia/MangaETECHNOLOGY.git
 ``` 
 
 2. Ainda no terminal vá para a pasta src:
 ```
-cd API/
+cd api/
 cd src/
 ```
 
@@ -49,5 +50,3 @@ Para encerrar o uso do site e sair do ambiente virtual vá ao seu terminal, (ond
 ```
 deactivate
 ```
-
-[link do site](https://mangaetechnology.vercel.app/)

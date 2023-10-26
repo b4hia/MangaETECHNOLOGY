@@ -84,7 +84,7 @@ const navBar = document.querySelector(".nav_menu_bars");
 		}
 		new SlideStories('slide');
 
-		var countDowndate = new Date("Oct 16, 2023 00:00:00").getTime();
+		var countDowndate = new Date("Jan 01, 2024 00:00:00").getTime();
 		var x = setInterval(function(){
 			var agora = new Date().getTime();
 			var distancia = countDowndate - agora;
